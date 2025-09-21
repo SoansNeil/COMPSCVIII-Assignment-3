@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Content Displayer & Basic Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Content Displayer & Basic Player</h1>
+    <p class="muted">Load a media file or paste content — control playback and view content side-by-side.</p>
+  </header>
+
+  <main class="container">
+    <section class="displayer">
+      <h2>Content Displayer</h2>
+      <div class="controls">
+        <button id="clearText">Clear</button>
+        <button id="loadSample">Load Sample Text</button>
+      </div>
+      <textarea id="contentArea" placeholder="Paste text here or click 'Load Sample Text'..." spellcheck="true"></textarea>
+    </section>
+
+    <section class="player">
+      <h2>Basic Player</h2>
+
+      <div class="player-panel">
+        <div class="file-controls">
+          <label class="file-label">
+            Load media
+            <input id="fileInput" type="file" accept="audio/*,video/*" />
+          </label>
+          <button id="playPause" disabled>Play</button>
+          <button id="stop" disabled>Stop</button>
+        </div>
+
+        <div class="media-area">
+          <!-- Media element will be injected here when a file is loaded -->
+          <div id="mediaWrapper" class="media-wrapper">
+            <div class="placeholder">No media loaded</div>
+          </div>
+        </div>
+
+        <div class="controls-row">
+          <input id="seek" type="range" min="0" max="100" value="0" step="0.1" disabled />
+          <div class="time">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <div class="controls-row">
+          <label>Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="1" /></label>
+          <label><input id="loop" type="checkbox" /> Loop</label>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small class="muted">Tip: you can drag-and-drop a file onto the "Load media" button or use the file picker.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
