@@ -9,6 +9,7 @@ The fact that it did so much in such a little time surprised me a lot and that i
 <p>I did not know that an OpenAI was capable of good and effective work, I was always told not to use it because the answers are probably wrong.<p>
 - What would you do differently if you had to build this again?
 <p>I would take the developing process a little slower so I have an idea of what is going on.<p>
+
 ![First Interaction](images/SS1.png)
 ![Second Interaction](images/SS2.png)
 ![CoPilot asked to check with python](images/SS3.png)
